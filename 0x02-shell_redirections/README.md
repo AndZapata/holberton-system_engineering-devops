@@ -1,0 +1,1 @@
+In this proyect we could find some problems solves about Shell, Standard In and Standard out redirection.
