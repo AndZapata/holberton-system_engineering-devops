@@ -1,0 +1,1 @@
+In this part of the proyect we are going to understand how to use the expansions with in the command part, the variable, also, the init files.
