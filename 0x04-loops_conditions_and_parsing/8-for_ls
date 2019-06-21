@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #Comentario
-for i in .
+LISTS=$(ls)
+for i in $LISTS
 do
-    ls | cut -f2 -d$'\t'
+    echo "$i" | cut -f2 -d-
 done
