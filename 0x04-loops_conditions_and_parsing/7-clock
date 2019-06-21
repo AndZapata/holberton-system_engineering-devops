@@ -3,14 +3,19 @@
 hour=0
 min=1
 echo "Hour: $hour"
-while ((hour < 12))
+while ((hour <= 12))
 do
     echo $min
     ((min++))
     if ((min > 59))
     then
-	((hour++))
-	echo "Hour: $hour"
-	min=1
+	if ((hour < 12))
+	then
+	    ((hour++))
+	    echo "Hour: $hour"
+	    min=1
+	else
+	    ((hour++))
+	fi
     fi
 done
