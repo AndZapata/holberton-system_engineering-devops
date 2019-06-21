@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Comentario
+for i in .
+do
+    ls | cut -f2 -d$'\t'
+done
