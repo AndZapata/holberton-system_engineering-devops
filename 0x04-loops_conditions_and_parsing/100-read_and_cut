@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#comentario
+cut -f 1,3,6 -d: /etc/passwd | while read -r c1
+do
+    echo $c1
+done
