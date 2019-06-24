@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Comentario
+pkill -f 7-highlander
