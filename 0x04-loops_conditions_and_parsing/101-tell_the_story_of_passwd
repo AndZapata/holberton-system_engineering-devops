@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #comentario
-while IFS=: read -r US PSS U_ID GID USINF HDIR CSHL
+IFS=':'
+while read -r US PSS U_ID G_ID USINF HDIR CSHL
 do
-    echo "The user $US is part of the $GID gang, lives in $HDIR and rides $CSHL. $U_ID's place is protected by the passcode $PSS, more info about the user here: $USINF'"
+    echo "The user $US is part of the $G_ID gang, lives in $HDIR and rides $CSHL. $U_ID's place is protected by the passcode $PSS, more info about the user here: $USINF"
 done < /etc/passwd
