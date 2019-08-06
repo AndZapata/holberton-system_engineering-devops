@@ -1,0 +1,5 @@
+# Coment: current task SSH client configuration answer file
+Host ubuntu
+     HostName 35.227.76.167
+     IdentityFile ~/.ssh/holberton
+     PasswordAuthentication no
