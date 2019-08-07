@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Comment: Current task /redirect_me to redirect to another page with
+# redirection 301
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo service nginx start
+sudo sed -i "30i \\\trewrite ^/redirect_me https://https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+sudo service nginx restart
