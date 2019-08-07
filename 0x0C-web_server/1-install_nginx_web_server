@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-# Un comentario
-sudo apt-get -y update
+# comment: current task install nginx in a server
+sudo apt-get update
 sudo apt-get -y install nginx
-sudo service nginx start
-echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo systemctl restart nginx
+sudo service nginx start
