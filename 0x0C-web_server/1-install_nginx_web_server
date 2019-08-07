@@ -2,5 +2,5 @@
 # comment: current task install nginx in a server
 sudo apt-get update
 sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo service nginx start
