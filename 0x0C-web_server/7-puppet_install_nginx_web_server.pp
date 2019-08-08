@@ -10,13 +10,13 @@ package { 'nginx':
 -> file { '/etc/nginx/sites-available/default':
   ensure => present,
 }
--> file_line { 'rewrite a line'
+-> file_line { 'rewrite a line':
   ensure => present,
   path => '/etc/nginx/sites-available/default',
   line => 'server {
 	rewrite ^/redirect_me https://https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
   match => '^server {',
 }
--> exec { 'initialize server'
+-> exec { 'initialize server':
   command => '/usr/sbin/service nginx restart',
 }
