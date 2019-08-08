@@ -5,7 +5,7 @@ package { 'nginx':
 -> file { 'path to create':
   ensure  => present,
   path    => '/var/www/html/index.html',
-  content => 'Holberton School'
+  content => 'Holberton School',
 }
 -> file { '/etc/nginx/sites-available/default':
   ensure => present,
