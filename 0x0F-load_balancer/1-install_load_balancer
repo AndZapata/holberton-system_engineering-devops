@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# comment: current task install nginx in a server
+sudo apt-get update
+sudo apt-get -y install haproxy
+echo "
+frontend andzapata
+    bind *:80
+    default_backend and_dev
+
+backend and_dev
+    balance roundrobin
+    option forwardfor
+    server 778-web-01  35.227.76.167:80
+    server 778-web-02  35.237.211.62:80" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
