@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Comment: Current task search for a wrong listening port
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default && sudo service nginx restart
