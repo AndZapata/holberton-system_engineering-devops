@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Comment: current task run command as a super user
+sudo -u "$1" bash -c 'whoami'
