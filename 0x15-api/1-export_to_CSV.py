@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 ''' for a given employee ID, returns information about TODO list progress '''
 if __name__ == "__main__":
     import csv
