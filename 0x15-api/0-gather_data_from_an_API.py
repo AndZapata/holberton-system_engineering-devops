@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 ''' for a given employee ID, returns information about TODO list progress '''
 if __name__ == "__main__":
-    from requests import get, post
+    from requests import get
     from sys import argv
     list_to_do = get('https://jsonplaceholder.typicode.com/todos?userId={}'
                      .format(argv[1])).json()
@@ -14,7 +14,7 @@ if __name__ == "__main__":
             to_do.append(i.get('title'))
         else:
             all_to_do.append(i.get('title'))
-    print('Employee {} is done with tasks {}/{}:'
+    print('Employee {} is done with tasks({}/{}):'
           .format(users.get('name'), len(to_do), len(to_do) + len(all_to_do)))
     for j in to_do:
         print('\t{}'.format(j))
