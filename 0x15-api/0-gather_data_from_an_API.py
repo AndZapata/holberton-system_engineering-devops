@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 ''' for a given employee ID, returns information about TODO list progress '''
+from requests import get
+from sys import argv
+
+
 if __name__ == "__main__":
-    from requests import get
-    from sys import argv
     list_to_do = get('https://jsonplaceholder.typicode.com/todos?userId={}'
                      .format(argv[1])).json()
     users = get('https://jsonplaceholder.typicode.com/users/{}'
