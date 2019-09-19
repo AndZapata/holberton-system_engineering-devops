@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 ''' Comment: start point'''
 from requests import get
-
-
 after = ''
+
+
 def recurse(subreddit, hot_list=[]):
     ''' recursive function to obtain a list of top titles in all pages '''
     global after
